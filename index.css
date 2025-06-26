@@ -1,85 +1,210 @@
-h1,
-h2,
-p,
-nav,
-pre {
-  padding: 15px;
-  color: black;
+body {
+    background-color: rgb(21, 110, 126);
+    background-image: url(file:///home/reboot/Downloads/Design%20sans%20titre/1.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-main {
-  width: 55%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
 }
 
-#langues {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
+.navbar {
+    background-color: #333;
+    overflow: hidden;
 }
 
-#languages {
-  width: 50%;
-  align-items: center;
-  text-align: center;
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
 }
 
-#languages td {
-  border: 1px solid black;
-  width: 8rem;
-
+.navbar li {
+    float: none;
 }
 
-#languages tr {
-  display: flex;
+.navbar li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar li a:hover {
+    background-color: #111;
+}
+
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 60px;
+    height: calc(100vh - 50px);
+    background: rgba(22, 121, 134, 0.97);
+    color: #fff;
+    padding: 20px 0 0 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 50;
+    transition: width 0.3s cubic-bezier(.4, 2, .6, 1);
+}
+
+.sidebar:hover,
+.sidebar:focus-within {
+    width: 260px;
 }
 
 
-p,
-h2,
-table,
-ul {
-  font-weight: 200;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  forced-color-adjust: white;
+.sidebar:not(:hover):not(:focus-within) h2,
+.sidebar:not(:hover):not(:focus-within) .apropos-sousparties {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
 }
 
-#loisirs {
-  display: flex;
-  flex-direction: column;
-
-  background-color: rgb(216, 226, 240);
+.sidebar:hover h2,
+.sidebar:focus-within h2,
+.sidebar:hover .apropos-sousparties,
+.sidebar:focus-within .apropos-sousparties {
+    opacity: 1;
+    transition: opacity 0.2s 0.1s;
 }
 
-#éducation {
-  background-color: rgb(123, 160, 190)
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: rgb(215, 221, 245);
+    transition: opacity 0.2s;
 }
 
-#experience {
-  background-color: rgb(69, 116, 179);
+.apropos-sousparties {
+    padding: 0 20px;
+    transition: opacity 0.2s;
 }
 
-#informations {
-  background-color: rgb(216, 226, 240);
+
+.main-content {
+    margin-left: 60px;
+    transition: margin-left 0.3s cubic-bezier(.4, 2, .6, 1);
 }
 
-#langues {
-  background-color: rgb(123, 160, 190);
+.sidebar:hover~.main-content,
+.sidebar:focus-within~.main-content {
+    margin-left: 260px;
 }
 
-img {
-  width: 7.6%;
-  position: absolute;
-  border-radius: 999px;
-  top: 225px;
-  right: 450px;
+
+
+.accordion {
+    background-color: #267986;
+    color: #fff;
+    cursor: pointer;
+    padding: 14px 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background 0.2s;
+    font-size: 1em;
+    border-radius: 8px;
+    margin-bottom: 8px;
 }
 
-nav {
-  text-align: center;
-  font-size: larger;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.accordion.active,
+.accordion:hover {
+    background-color: #145d6e;
+}
+
+.panel {
+    background: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.25s ease;
+    padding-left: 8px;
+}
+
+.panel p {
+    margin: 10px 0 18px 0;
+    color: #e0e8f0;
+}
+
+.btn {
+    padding: 20px;
+    background-color: rgb(22, 121, 134);
+    border-radius: 10px;
+    left: 600px;
+    position: absolute;
+    transform: translateX(-50%);
+    border: none;
+    top: 625px;
+    font-size: x-large;
+    text-decoration: none;
+    color: rgb(215, 221, 245);
+    font-family: 'Times New Roman', Times, serif;
+    rotate: -1.6deg;
+}
+
+#contact {
+    position: absolute;
+    top: 600px;
+    left: 730px;
+    rotate: -1.6deg;
+    color: rgb(22, 121, 134);
+}
+
+h2 {
+    color: rgb(22, 121, 134);
+    position: absolute;
+    left: 487px;
+    top: 525px;
+    rotate: -1.6deg;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+
+.side-title-right {
+    position: fixed;
+    top: 50%;
+    right:200px;
+    transform: translateY(-50%);
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 3em;
+    color: #d7dde5;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    z-index: 60;
+    user-select: none;
+    cursor: default;
+}
+
+
+@media (max-width: 768px) {
+    .side-title-right {
+        display: none;
+    }
+}
+
+.with-blur-backdrop {
+
+  background-color: rgba(8, 7, 7, 0.4);
+
+  -webkit-backdrop-filter: blur(5px);
+
+  backdrop-filter: blur(5px);
+
+  padding: 20px 30px;
+
 }

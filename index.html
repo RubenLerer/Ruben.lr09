@@ -1,69 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-  <title>CV Ruben Lerer</title>
+  <meta charset="UTF-8">
+  <title>Ruben Lerer</title>
   <link rel="stylesheet" href="index.css">
 </head>
 
-
 <body>
-  <nav><a href="#informations">profil</a> <a href="#éducation">éducation</a> <a href="#experience">experience</a> <a
-      href="#langues">langues</a> <a href="#loisirs">loisirs</a></nav>
-
-  <main>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/The_Rock_2023.jpg" alt="">
-    <h1> Ruben Lerer</h1>
-
-    <div id="informations">
-      <h2> informations</h2>
-      <p>je m'appelle Ruben Lerer, j'ai 16 ans et j'habite à Paris</p>
-    </div>
-    <div id="éducation">
-      <h2>éducation</h2>
-      <p>Je suis depuis la maternelle dans la même école qui fait des cours jusqu'au lycée et se nomme Maimonide Rambam
-      </p>
-    </div>
-    <div id="experience">
-      <h2>experience</h2>
-      <p>Dans le cadre des classes de troisième et de seconde j'ai eu la chance de réaliser deux stages.
-        Le premier fut d'une semaine dans un cabinet d'avocat en plein Paris.
-        Le second, à Strasbourg dans une entreprise de conseil dans laquelle j'ai énormément appris notemment le code en
-        différents languages informatiques</p>
-    </div>
-    <div id="langues">
-      <h2>langues</h2>
-      <table id="languages">
-        <tbody>
-
-          <tr>
-            <td>français</td>
-            <td>anglais</td>
-            <td>espagnol</td>
-            <td>hébreu moderne</td>
-          </tr>
-          <tr>
-            <td>C2</td>
-            <td>B2</td>
-            <td>B1</td>
-            <td>A1</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div id="loisirs">
-      <h2>loisirs</h2>
+  <header>
+    <nav class="navbar">
       <ul>
-        <li>piano</li>
-        <li>chant</li>
-        <li>dessin</li>
-        <li>sport</li>
-        <li>jeux vidéos</li>
+        <li><a href="file:///home/reboot/Desktop/.vscode/index.html">Ruben Lerer</a></li>
       </ul>
-    </div>
+    </nav>
+  </header>
+  <div class="side-title-right with-blur-backdrop">
+  Développeur Web <br>     & Designer
+</div>
+
+
+  <aside class="sidebar">
+    <section class="apropos-section" id="apropos">
+      <h2>À propos</h2>
+      <div class="apropos-sousparties">
+        <div class="souspartie">
+          <button class="accordion">À propos de moi</button>
+          <div class="panel">
+            <p>Depuis la tendre enfance j'ai un attachement particulier à l'art qu'il soit musical ou calligraphique. En
+              effet je dessine depuis toujours et je pratique le piano, le chant et la guitare.</p>
+          </div>
+        </div>
+        <div class="souspartie">
+          <button class="accordion">À propos de mes expériences</button>
+          <div class="panel">
+            <p>J'ai eu la chance de faire deux stages d'observation dans le cadre de ma scolarité. Le premier lors de la
+              classe de troisième, dans un cabinet d'avocat.
+              Le deuxième s'est déroulé lors de mon année de seconde, dans une entreprise de conseil informatique.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </aside>
+
+  <main class="main-content">
+    <a href="file:///home/reboot/Desktop/CV.html" download class="btn">Télécharger le CV</a>
+    <section id="contact">
+      <div>
+        <h1>Contact</h1>
+        <p>📞 07 83 90 83 49</p>
+      </div>
+    </section>
+    <h2>Ruben Lerer <br> 22 rue Mstislav Rostropovitch <br>16 ans</h2>
   </main>
-  <script src="index.js"></script>
+
+  <script>
+    document.querySelectorAll('.accordion').forEach(btn => {
+      btn.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.màaxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
