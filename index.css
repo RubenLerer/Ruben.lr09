@@ -1,0 +1,85 @@
+h1,
+h2,
+p,
+nav,
+pre {
+  padding: 15px;
+  color: black;
+}
+
+main {
+  width: 55%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#langues {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+#languages {
+  width: 50%;
+  align-items: center;
+  text-align: center;
+}
+
+#languages td {
+  border: 1px solid black;
+  width: 8rem;
+
+}
+
+#languages tr {
+  display: flex;
+}
+
+
+p,
+h2,
+table,
+ul {
+  font-weight: 200;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  forced-color-adjust: white;
+}
+
+#loisirs {
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(216, 226, 240);
+}
+
+#éducation {
+  background-color: rgb(123, 160, 190)
+}
+
+#experience {
+  background-color: rgb(69, 116, 179);
+}
+
+#informations {
+  background-color: rgb(216, 226, 240);
+}
+
+#langues {
+  background-color: rgb(123, 160, 190);
+}
+
+img {
+  width: 7.6%;
+  position: absolute;
+  border-radius: 999px;
+  top: 225px;
+  right: 450px;
+}
+
+nav {
+  text-align: center;
+  font-size: larger;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
